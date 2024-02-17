@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="pagina personal de julio godoy a modo de portafolio">
+	<link rel="shortcut icon" href="foto-mia.webp">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<title>Julio Godoy Muñoz</title>
+</head>
+<body id = "body">
+	<a href = "https://www.facebook.com/profile.php?id=100078438379174" target = _blank><img src = "facebook.png" width = "100"/></a>
+	<a "href = "https://www.youtube.com/channel/UCB9J-eIcko25-NZrLK5E9mg" target = _blank><img src = "youtube.png" width = "100"/></a>
+	<a id = "link-contacto" href = "#contacto"> Contacto</a>
+	<h1 id = "titulo">Julio Enrique Godoy Muñoz</h1>
+	<center><img id = "imagen" src = "foto-mia.webp" width = "200px" height = "250px"></a></center>
+	<br><br>
+	<canvas id="canvas" whith = "200" height = "150"></canvas>
+	<div id = "tituloProyectos"><h2>Proyectos</h2></div>
+	<h3 style="text-align: center">Para jugar presione enter. Para saltar presione la letra "s" del teclado y use las flechas para moverse</h3>
+	<center><canvas id = "videojuego" width = "700" height = "400"></canvas></center>
+	
+	
+	<h3 style="text-align: center">Humilde videojuego en java sin librerias externas</h3>
+			<p>Aqui desarrolle un videojueguito de mario con java sin librerias externas. Fue un gran ejercicio de programacion, ya que use varias tecnicas de programacion: como POO, hilos, eventos,etc. Más abajo procedo a explicar mas detalladamente cada tecnica empleada.</p>
+			<p>En POO use la modularizacion. Cada personaje del juego tiene su propia clase. Existe una Clase abstracta llamada "Enemigo", la cual posee un metodo abstracto en el que se describe el movimiento del enemigo, que es diferente para cada enemigo, de ahi se sigue que cada clase que herede de la clase enemigo tenga que implementar dicho metodo abstracto. En consecuencia, cada openente de Mario debe heredar de la clase "Enemigo".</p>
+			<p>Use un hilo para que fuera pintando cada cuarenta milisegundos la escena y ademas fuera verificando si se habia producido una colision entre Mario y los enemigos.</p>
+			<p>Use eventos para poder mover al Mario, en este caso, como use java, utilice la interfaz KeyListener. Cuando se presionan las teclas de las flechas derechas e izquierdas el Mario se mueve, cuando presiono la tecla control este salta. Inmediatamente abajo se encuentra un link a un video donde se muestra el videojueguito.</p>
+			<center><a href="https://youtu.be/LzJ0TYb2zJU" target = _blank>Link al video donde se muestra el programa</a></center>
+	<br><br>
+	<h3 style="text-align: center">superponer dos videos con transparencia en swing de java</h3>
+		<p>En este programa se muestran dos videos simultaneamente en un jframe de java swing. A continucion procedo a explicar a detalle. Primero tuve que obtener los fotogramas del video, que no son mas que imagenes. Ejemplo: si un video corre a 60 FPS (frames per second) significa que el video muestra 60 fotogramas por segundos.</p>
+		<p>Una vez que consegui los fotogramas del video (los obtube de una pagina web que convertia videos en fotogramas online) procedi a guardarlos en un BufferedImage. Con esta clase uno puede manipular cada pixel de una imagen. Entonces hice que cada pixel de la imagen de cada video contribuyera con un 50% de su color para contruir otro nuevo pixel seria la imagen resultante con un 50% de cada una.</p>
+		<p>Despues solo tuve que mostrar las imagenes combinadas en un JPanel cada cierta cantidad de milisegundos para crear el efecto de animacion de un video.</p>
+		<center>
+			<a href = "https://www.youtube.com/watch?v=atq49cUCgwA&t=1s" target = _blank>Link al video donde se muestra el programa<a>
+		</center>
+	
+	<br><br>
+	<h3 style="text-align: center">dibujando como en paint de windows con java swing</h3>
+		<p>En este programa cree tres botones, cada uno con una figura de las que parecen en el Paint de Windows. Use drawOval para dibujar elipses, DdrawRect para los rectangulos, y drawLine para las lineas. Use los dos eventos de raton de java. Los dados en las interfaces MouseMotionListener y MouseListener, ya que necesite de mouseDragged para arrastrar la figura y esta se fuera mostrando al momento de ir arrastrando el mouse utilice los metodos de MouseListener.</p>
+		<center>
+			<a href = "https://www.youtube.com/watch?v=qJrpiAsvlxY" target = _blank>Link al video donde se muestra el programa</a>
+		</center>
+	<br><br>
+	<h3 style="text-align: center">redimensionar una imagen con java swing</h3>
+		<p>En este programa use el evento de raton de java para obtener la posicion del puntero del raton y con eso poder redimensionar la imagen contenida en un JPanel. Inmediatamente abajo hay un link a un video donde muestro el resultado del programa.</p>
+		<center>
+			<a href = "https://www.youtube.com/watch?v=c_Df8gPeMFY" target = _blank>Link al video donde se muestra el programa</a>
+		</center>
+	
+	<br><br>
+	<h3 style="text-align: center;color">resolucion de ejercicios de programacion competitiva</h3>
+		<p>Suelo participar en concursos de programacion competitiva, pero no estoy bien ranqueado. El video al que lleva el link que esta abajo, es muy explicativo. Aunque tuvo más de matematica que de algoritmos el ejercicio.</p>
+		<center>
+			<a href = "https://www.youtube.com/watch?v=nW3L_23nfcM" target = _blank>Link al video donde se muestra la resolucion de un ejercicio</a>
+        	</center>
+		<br><br><br><br>
+		<p id = "agradecimientos">Por ultimo queria agradecer a quien siempre me ayuda: Dios todopoderoso.</p>
+<br><br><br>
+	<footer id = "contacto">
+		<center>
+			Contacto:
+			<br>
+			correo: julio_godoy_mu@hotmail.com
+			<br>
+			telefono: +56 9 41875270
+		</center>
+<br><br><br>
+	</footer>
+<script>
+    window.onload = function(){
+        let m1 = "Julio Enrique Godoy Muñoz";
+        let m2 = "Programador Autodidacta";
+	let img = document.getElementById("imagen");
+        let idTitulo = document.getElementById("titulo");
+	setInterval(() => {
+		if(idTitulo.innerHTML === m1)
+        		idTitulo.innerHTML = m2;
+		else
+			idTitulo.innerHTML = m1;
+		if(img.getAttribute("src") === "foto-mia.webp")
+			img.setAttribute("src","logo-java.png");
+		else
+			img.setAttribute("src","foto-mia.webp");
+        },1500);
+	let proyectos = document.getElementById("tituloProyectos");
+	setInterval(() => {
+		let margenLeft = proyectos.style.paddingLeft;
+		let margen = parseInt(margenLeft.replace("px",""));
+		if(margen < window.innerWidth/2)
+			margen += 10;
+		else
+			margen = 0;
+                proyectos.style.paddingLeft = margen + "px";
+        },100);
+	let elementoCanvas = document.getElementById("canvas");
+	window.addEventListener("resize", funcionRedimencionar);
+	function funcionRedimencionar(){
+		let anchoNav = window.innerWidth;
+		elementoCanvas.setAttribute("width",anchoNav);
+	}
+        let canvas = elementoCanvas.getContext("2d");
+	let x = 0,y = 20;
+	let ancho = window.innerWidth;
+        elementoCanvas.setAttribute("width",ancho);
+        let incremento1 = 10;
+        let imagen = new Image();
+        imagen.src="mario bros.png"
+        setInterval(()=> {
+                ancho = window.innerWidth;
+		
+		if(x < ancho - 100 && x >= 0){
+			x += incremento1;
+                        canvas.fillStyle = "white";
+                        canvas.fillRect(0,0,ancho,150);
+			canvas.drawImage(imagen,x,y,100,100);
+		}else{	
+			if(x > ancho - 100)
+				x = ancho - 100;
+			incremento1 = -incremento1;
+			x += incremento1;
+		}
+                
+	},40);
+			let elementoVideojuego = document.getElementById("videojuego");
+			let videojuego = elementoVideojuego.getContext("2d");
+ 			let anchoMario = 40;
+                        let anchoV = 700, altoV = 400;
+			let mario = new Image();
+			mario.src = "mario bros.png";
+                        let xMario = 0, yMario = 200 - anchoMario;
+                        let salto = false;
+			const altoSalto = 120;
+			let incremento = -3;
+			let bowser = new Image();
+			bowser.src = "bowser.png";
+			let anchoBowser = 40;
+			let bowserX = 300, bowserY = altoV/2 - anchoBowser,incrementoBowser = 3;
+		        let gameOver = new Image();
+			let play = false;
+			let body = document.getElementById("body");
+			videojuego.font = "20pt consolas";
+			let mensaje = "Presione enter para jugar";
+			let mensajeGanaste = "Felicitaciones, ganaste"
+                        let anchoTextoGanaste = videojuego.measureText(mensajeGanaste);
+			let anchoTexto = videojuego.measureText(mensaje);
+                        let derecha = false;
+			let izquierda = false;
+			let fantasma = new Image();
+			fantasma.src = "fantasma.png";
+			let anchoFantasma = 40;
+			let incrementoFantasma = -3;
+			let fantasmaX = 500, fantasmaY = 200 - anchoFantasma;
+			let ganaste = 0;
+			let xText = Math.floor(anchoV/2 - anchoTexto.width/2);
+			let yText = Math.floor(altoV/2 + anchoTexto.hangingBaseline/2);
+			let xGanasteText = Math.floor(anchoV/2 - anchoTextoGanaste.width/2);
+			let yGanasteText = Math.floor(altoV/2 + anchoTextoGanaste.hangingBaseline/2);
+			body.addEventListener("keydown", function(evento){
+				if(event.key === "ArrowLeft" && xMario >= 0){
+					izquierda = true;
+				}
+				if(event.key === "ArrowRight" && xMario < anchoV - anchoMario){
+					derecha = true;
+				}
+				if(event.key ==="s")
+					salto = true;
+				if(event.key ==="Enter")
+					play = true;
+			});
+			body.addEventListener("keyup", function(evento){
+				if(event.key === "ArrowLeft")
+					izquierda = false;
+				if(event.key === "ArrowRight")
+					derecha = false;
+
+			});
+			setInterval(function(){
+			    	if(!play){ 
+					videojuego.fillStyle = "green";
+					videojuego.fillRect(0, 0, anchoV, altoV);
+					videojuego.fillStyle = "blue";
+					
+					if(ganaste === 0)
+						videojuego.fillText(mensaje, xText, yText);
+					else{
+						videojuego.fillText(mensajeGanaste, xGanasteText, yGanasteText);
+						ganaste--;
+					}
+				}else{
+					if(salto){
+						if(yMario <=  altoV/2 - altoSalto)
+							incremento = -1*incremento;
+						yMario += incremento;
+                                	        if(yMario > altoV/2 - anchoMario){
+							yMario = altoV/2 - anchoMario;
+							salto = false;
+							incremento = -1 * incremento;
+						}				 	
+					}
+   					videojuego.fillStyle = "#00b8ff";
+					videojuego.fillRect(0,0,700,400);
+					videojuego.fillStyle = "green";
+					videojuego.fillRect(0,altoV/2,anchoV,altoV/2);
+					videojuego.drawImage(mario,xMario,yMario,anchoMario,anchoMario);
+					if(bowserX < 150 || bowserX >300)
+						incrementoBowser = -1*incrementoBowser;
+					bowserX += incrementoBowser;
+					if(fantasmaY < 50 || fantasmaY > 200 - anchoFantasma)
+						incrementoFantasma = -1 * incrementoFantasma;
+					fantasmaY += incrementoFantasma;
+					videojuego.drawImage(bowser,bowserX,bowserY,anchoBowser, anchoBowser);
+					videojuego.drawImage(fantasma,fantasmaX, fantasmaY,anchoFantasma,anchoFantasma);
+					if((Math.abs(xMario - bowserX) < 30 && Math.abs(yMario - bowserY) < 30)||(Math.abs(xMario - fantasmaX) < 30 && Math.abs(yMario - fantasmaY) < 30) ){
+						xMario = 0;
+						yMario = 200 - anchoMario;
+						bowserX = 300;
+						fantasmaY = 200 - anchoFantasma;
+						salto = false;
+						play = false;
+						derecha = false;
+						izquierda = false;
+					}
+					if(derecha && xMario < anchoV - anchoMario)
+						xMario += 3;
+					if(izquierda && xMario > 0)
+						xMario -= 3;	
+					if(xMario >= anchoV - anchoMario){
+						xMario = 0;
+						yMario = 200 - anchoMario;
+						bowserX = 300;
+						fantasmaY = 200 - anchoFantasma;
+						salto = false;
+						play = false;
+						derecha = false;
+						izquierda = false;
+						ganaste = 100;
+					}					
+				}
+			},50);
+    }	
+</script>
+</body>
+
+</html>
